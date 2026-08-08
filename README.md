@@ -120,5 +120,4 @@ License
 MIT - Built for MoMo Mini App Hackathon 2026
 
 Contact: For MoMo Developer Team - Ready for sandbox keys and mentorship. Let's kill cash risk in kasi.
-## Pitch Slide
-<img width="1920" height="1280" alt="image" src="https://github.com/user-attachments/assets/82c12126-4819-46ea-a87c-7c05a19dbce1" />
+![Pitch Slide](pitch_slide_fixed.png)
