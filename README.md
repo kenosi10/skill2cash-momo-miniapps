@@ -1,3 +1,5 @@
+<img width="1920" height="1280" alt="image" src="https://github.com/user-attachments/assets/7f1b7ba5-2604-41a4-a398-fd4a7f78b6e6" />
+
 Skill2Cash - Kasi Gig Escrow | MoMo Mini App Hackathon 2026
 
 Team: South Africa-Skill2Cash
