@@ -1,124 +1,146 @@
 <img width="1920" height="1280" alt="image" src="https://github.com/user-attachments/assets/7f1b7ba5-2604-41a4-a398-fd4a7f78b6e6" />
 
-Skill2Cash - Kasi Gig Escrow | MoMo Mini App Hackathon 2026
+# Skill2Cash
 
-Team: South Africa-Skill2Cash
+**Kasi Gig Escrow Mini App**  
+*MoMo Mini App Hackathon 2026 – South Africa*
 
-    Tagline: No more "I will pay you tomorrow". Do the job, get paid instantly.
+> **Tagline:** No more “I’ll pay you tomorrow”. Do the job. Get paid instantly.
 
-MoMo API
+---
 
-Track
-[blocked]
-Status
-[blocked]
-Made for
-[blocked]
-The Problem
+### The Problem
 
-In townships like Mhluzi, Hammanskraal and across SA, 60% of youth do piece jobs - gardening, plumbing, hair braiding, phone repairs. There is zero trust:
+In townships across South Africa (Hammanskraal, Mhluzi, Tembisa and beyond), the majority of youth rely on piece jobs — gardening, plumbing, hair braiding, phone repairs, cleaning.
 
-    Clients fear paying upfront and getting a no-show
-    Youth fear working and hearing "come tomorrow"
-    No proof, no ratings, cash handling is risky
-    Word of mouth only = no digital footprint
+There is almost zero trust:
 
-Result: Daily income is lost, youth stay invisible to the formal economy.
-The Solution
+- Clients fear paying upfront and getting a no-show  
+- Workers fear finishing the job and hearing “come back tomorrow”  
+- Cash is risky and leaves no record  
+- No ratings, no proof, no digital footprint
 
-Skill2Cash is a Mini App that lives INSIDE the MoMo app (no extra download).
+Result: daily income is lost and informal workers stay invisible to the formal economy.
 
-How it works - 30 second flow:
+---
 
-    Client Posts & Locks: "Cut yard R150, 1975 Temba kudube unit 2, today 2pm" - Pays R150 via MoMo Collections into escrow. Money is safe.
-    Youth Accepts: Verified youth within 3km gets push, accepts job.
-    Do The Job: Youth arrives, does job, uploads before/after photo in mini-app.
-    Instant Payout: Client taps "Job Done" -> MoMo Disbursement pays youth INSTANTLY to MoMo wallet.
-    Trust Built: Both rate each other. Disputes reviewed with photos.
+### The Solution
 
-Why MoMo Mini App?
+**Skill2Cash** is a Mini App that lives *inside* the MoMo app. No extra download. No heavy data usage.
 
-    No download, no data-heavy app - lives where money already is
-    Works low-data, USSD fallback planned
-    Languages: English, isiZulu, Sepedi
-    Instant trust because payment is locked by MTN
+**30-second flow:**
 
-MoMo APIs Used
-API	Usage
-Collections (Collection Widget)	Client locks job funds into escrow wallet
-Disbursements	Instant payout to worker after client approval
-Transaction Status	Verify escrow locked before worker starts
-Party Lookup / KYC	Verify both users are MoMo registered
+1. **Client posts & locks funds**  
+   “Cut yard – R150 – 1975 Temba, Kudube Unit 2 – today 2pm”  
+   → Pays via **MoMo Collections**. Money goes into escrow.
 
-Escrow Logic: Funds held in merchant wallet -> Released only on JobDone confirmation or admin dispute resolution.
-Key Features (MVP)
+2. **Nearby worker accepts**  
+   Verified youth within ~3 km gets notified and accepts the job.
 
-    Post Job with price, location, time
-    Find Jobs near me (geolocation)
-    Escrow payment badge - "Funds Secured by MoMo"
-    Before/After photo proof
-    One-tap "Job Done" & instant payout
-    Rating system - building digital CV for informal workers
-    In-app chat (Phase 2)
-    Dispute center (Phase 2)
+3. **Job is done**  
+   Worker uploads before & after photos as proof.
 
-Tech Stack
+4. **Instant payout**  
+   Client taps “Job Done” → **MoMo Disbursement** sends money straight to the worker’s MoMo wallet.
 
-    Frontend: MoMo Mini App SDK, HTML5, JavaScript (React)
-    Backend: Node.js + Supabase / Firebase (Auth, Realtime DB, Storage)
-    Database: Firestore - Jobs, Users, Ratings
-    Storage: Firebase Storage - Job proof photos
-    APIs: MTN MoMo Sandbox (Collections, Disbursements)
-    Hosting: Azure Static Web Apps / MoMo Cloud
+5. **Trust is built**  
+   Both rate each other. Ratings + photo proof create a digital CV for informal workers.
 
-Architecture
+---
 
-Client App (MoMo Mini App) -> Supabase (Job Logic + Escrow State) -> MTN MoMo API
-                                   |
-                                   -> Firestore (Ratings, History)
+### Why a MoMo Mini App?
 
-How To Run (Sandbox)
-bash
+- Lives where the money already is  
+- Works on low data  
+- Languages: English, isiZulu, Sepedi  
+- Payment is locked by MTN → instant trust  
+- USSD fallback planned for feature phones
 
-# Clone
+---
+
+### MoMo APIs Used
+
+| API                        | Purpose                                      |
+|---------------------------|----------------------------------------------|
+| Collections               | Client locks job funds into escrow           |
+| Disbursements             | Instant payout to worker                     |
+| Transaction Status        | Confirm funds are locked before work starts  |
+| Party Lookup / KYC        | Verify both parties are MoMo registered      |
+
+**Escrow logic:** Funds are held in the merchant wallet and only released on client “Job Done” confirmation or admin dispute resolution.
+
+---
+
+### MVP Features
+
+- Post a job (price, location, time, description)  
+- Find jobs near me (geolocation)  
+- “Funds Secured by MoMo” badge  
+- Before / after photo proof  
+- One-tap “Job Done” → instant payout  
+- Simple rating system  
+
+*Phase 2:* In-app chat + Dispute centre
+
+---
+
+### Tech Stack
+
+- **Frontend:** MoMo Mini App SDK + React  
+- **Backend:** Node.js + Supabase / Firebase  
+- **Database:** Firestore (Jobs, Users, Ratings)  
+- **Storage:** Firebase Storage (job proof photos)  
+- **Payments:** MTN MoMo Sandbox (Collections + Disbursements)  
+- **Hosting:** Azure Static Web Apps / MoMo Cloud
+
+**Architecture**  
+`MoMo Mini App → Backend (job + escrow state) → MTN MoMo API`  
+`↳ Firestore (ratings & history)`
+
+---
+
+### Impact
+
+- **Financial inclusion** – gives informal workers a transaction history and digital reputation  
+- **Youth employment** – turns invisible skills into reliable daily income  
+- **Stays in the MoMo ecosystem** – pay, lock, and payout never leave MoMo  
+- **Scalable** – same problem exists in Ghana, Uganda, Zambia and other MoMo markets  
+- Aligns with MTN’s vision: *“Don’t build another app. Build the next service millions access through MoMo.”*
+
+---
+
+### Roadmap
+
+| Timeline              | Goal                                              |
+|-----------------------|---------------------------------------------------|
+| Hackathon (2–3 Sept)  | Working escrow flow in sandbox + 3 job categories |
+| Month 1               | Pilot with 50 youth in Pretoria & Hammanskraal    |
+| Month 3               | Dispute centre, Sepedi/Zulu, USSD support          |
+
+---
+
+### Team
+
+**South Africa – Skill2Cash**
+
+- **Tshepiso Tk Tsotetsi** – Product & Community Lead (Hammanskraal / Gauteng)
+
+Currently looking for **1 Mobile Dev** + **1 Backend Dev** before the Johannesburg onsite (2–3 September).
+
+---
+
+### Run (Sandbox)
+
+```bash
 git clone https://github.com/kenosi10/skill2cash-momo-miniapps.git
-
-# Install
+cd skill2cash-momo-miniapps
 npm install
 
-# Add .env
+# .env
 MOMO_COLLECTIONS_SUBSCRIPTION_KEY=your_key
 MOMO_DISBURSEMENT_SUBSCRIPTION_KEY=your_key
 MOMO_TARGET_ENVIRONMENT=sandbox
 
-# Run
 npm run dev
-
-Demo Video (Coming Soon)
-
-Link to 2-min demo to be added after sandbox access
-Impact - Why It Wins Track 1: Everyday Essentials
-
-    Financial Inclusion: Gives informal workers transaction history & digital CV
-    Youth Employment: Turns invisible skills into daily income
-    Stays in Ecosystem: Money never leaves MoMo - pay, escrow, payout all inside
-    Scalable: Same problem in Ghana, Uganda, Zambia - MoMo markets
-    Aligns with MTN Vision: "Don't build another app. Build the next service millions access through MoMo."
-
-Team - South Africa-Skill2Cash
-
-    Tshepiso Tk Tsotetsi - Product & Community Lead (Hammanskraal / Gauteng)
-
-Open to adding 1 Mobile Dev + 1 Backend Dev before Sept 2-3 onsite in Johannesburg.
-Roadmap
-
-Hackathon 24hrs (Sept 2-3, JHB): Working escrow flow in sandbox + 3 job categories
-Month 1: Pilot with 50 youth in Pretoria & Hammanskraal
-Month 3: Add dispute center, Sepedi/Zulu, USSD for feature phones
-License
-
-MIT - Built for MoMo Mini App Hackathon 2026
-
-Contact: For MoMo Developer Team - Ready for sandbox keys and mentorship. Let's kill cash risk in kasi.
 
 ![Pitch Slide](pitch_slide_fixed.png)
