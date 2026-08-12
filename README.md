@@ -81,7 +81,7 @@ How To Run (Sandbox)
 bash
 
 # Clone
-git clone https://github.com/skill2cash/momo-miniapps.git
+git clone https://github.com/kenosi10/skill2cash-momo-miniapps.git
 
 # Install
 npm install
