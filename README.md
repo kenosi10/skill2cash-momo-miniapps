@@ -108,3 +108,9 @@ MOMO_DISBURSEMENT_SUBSCRIPTION_KEY=your_key
 MOMO_TARGET_ENVIRONMENT=sandbox
 
 npm run dev
+
+---
+
+## Pitch Slide
+
+![Pitch Slide](pitch_slide_fixed.png)
